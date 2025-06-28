@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canada Move Checklist Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #d32f2f, #1976d2);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .tab-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tab {
+            background-color: #e3f2fd;
+            border: 2px solid #1976d2;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .tab.active {
+            background-color: #1976d2;
+            color: white;
+        }
+        .tab:hover {
+            background-color: #bbdefb;
+        }
+        .tab.active:hover {
+            background-color: #1565c0;
+        }
+        .content {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+            color: #333;
+        }
+        .priority-high { background-color: #ffebee; }
+        .priority-medium { background-color: #fff3e0; }
+        .priority-low { background-color: #e8f5e8; }
+        .status-not-started { background-color: #ffcdd2; }
+        .status-in-progress { background-color: #ffe0b2; }
+        .status-completed { background-color: #c8e6c9; }
+        .status-na { background-color: #f5f5f5; }
+        .instructions {
+            background-color: #e3f2fd;
+            border-left: 4px solid #1976d2;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .timeline {
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+        .category-header {
+            background-color: #1976d2;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🇨🇦 Canada Move Checklist</h1>
+        <p>Moving from Antioch, CA to Vancouver, BC • Family of 4 (2 third-graders)</p>
+    </div>
+
+    <div class="instructions">
+        <h3>📋 How to Use This Template</h3>
+        <p><strong>To create this in Google Sheets:</strong></p>
+        <ol>
+            <li>Create a new Google Sheets file in your "20 Family/Canada" folder</li>
+            <li>Create separate tabs for each category (Legal, Medical, Financial, etc.)</li>
+            <li>Copy the table structure from each tab below</li>
+            <li>Use conditional formatting to color-code status and priority levels</li>
+            <li>Update the "Status" column as you complete each item</li>
+        </ol>
+        <p><strong>Status Options:</strong> Not Started, In Progress, Completed, N/A</p>
+        <p><strong>Priority Levels:</strong> High (must do), Medium (should do), Low (nice to do)</p>
+    </div>
+
+    <div class="tab-container">
+        <div class="tab active" onclick="showTab('legal')">Legal & Immigration</div>
+        <div class="tab" onclick="showTab('medical')">Medical & Health</div>
+        <div class="tab" onclick="showTab('financial')">Financial</div>
+        <div class="tab" onclick="showTab('education')">Kids' Education</div>
+        <div class="tab" onclick="showTab('utilities')">Utilities & Services</div>
+        <div class="tab" onclick="showTab('housing')">Housing & Moving</div>
+        <div class="tab" onclick="showTab('personal')">Personal & Lifestyle</div>
+        <div class="tab" onclick="showTab('timeline')">Timeline Overview</div>
+    </div>
+
+    <div class="content">
+        <!-- Legal & Immigration Tab -->
+        <div id="legal" class="tab-content active">
+            <h2>🏛️ Legal & Immigration</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Timeline</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="category-header">
+                        <td colspan="6">IMMIGRATION DOCUMENTS</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Apply for work permit/visa (if needed)</td>
+                        <td>High</td>
+                        <td>3-6 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Check specific visa requirements</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Get passports renewed/updated</td>
+                        <td>High</td>
+                        <td>6-8 weeks before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>All family members</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Obtain birth certificates (certified copies)</td>
+                        <td>High</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>For all family members</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Get marriage certificate (certified copy)</td>
+                        <td>High</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>For spouse visa applications</td>
+                        <td></td>
+                    </tr>
+                    <tr class="category-header">
+                        <td colspan="6">LEGAL PREPARATIONS</td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Research immigration lawyer in Canada</td>
+                        <td>Medium</td>
+                        <td>3 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>For complex cases</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Update will and estate documents</td>
+                        <td>Medium</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Consult with lawyer</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td>Research Canadian tax obligations</td>
+                        <td>Low</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Understand tax residency rules</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Medical & Health Tab -->
+        <div id="medical" class="tab-content">
+            <h2>🏥 Medical & Health</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Timeline</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="category-header">
+                        <td colspan="6">MEDICAL RECORDS</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Request medical records for all family members</td>
+                        <td>High</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>From all current doctors</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Get children's vaccination records</td>
+                        <td>High</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Required for school enrollment</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Get prescription medication refills</td>
+                        <td>High</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>3-6 month supply</td>
+                        <td></td>
+                    </tr>
+                    <tr class="category-header">
+                        <td colspan="6">HEALTHCARE SETUP</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Research BC healthcare system (MSP)</td>
+                        <td>High</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Medical Services Plan</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Find family doctor in Vancouver</td>
+                        <td>Medium</td>
+                        <td>1 month after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Use BC College of Physicians directory</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Find pediatrician for children</td>
+                        <td>Medium</td>
+                        <td>1 month after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Get referrals from family doctor</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Find dentist and eye doctor</td>
+                        <td>Medium</td>
+                        <td>2 months after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Check insurance coverage</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td>Research health insurance options</td>
+                        <td>Low</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Extended health benefits</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Financial Tab -->
+        <div id="financial" class="tab-content">
+            <h2>💰 Financial</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Timeline</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="category-header">
+                        <td colspan="6">BANKING & ACCOUNTS</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Research Canadian banks</td>
+                        <td>High</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>TD, RBC, BMO, Scotia, CIBC</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Open Canadian bank account</td>
+                        <td>High</td>
+                        <td>1 month before/after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>May need to do after arrival</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Notify US banks of move</td>
+                        <td>High</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Update addresses</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Research currency exchange options</td>
+                        <td>High</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Compare rates: banks vs. Wise vs. others</td>
+                        <td></td>
+                    </tr>
+                    <tr class="category-header">
+                        <td colspan="6">CREDIT & INVESTMENTS</td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Research building credit history in Canada</td>
+                        <td>Medium</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Secured credit cards, etc.</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Review US investment accounts</td>
+                        <td>Medium</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Tax implications of being Canadian resident</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Research RRSP and TFSA accounts</td>
+                        <td>Medium</td>
+                        <td>3 months after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Canadian retirement savings</td>
+                        <td></td>
+                    </tr>
+                    <tr class="category-header">
+                        <td colspan="6">TAXES & INCOME</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Consult with cross-border tax specialist</td>
+                        <td>High</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>US-Canada tax treaty implications</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Apply for Social Insurance Number (SIN)</td>
+                        <td>Medium</td>
+                        <td>Within 30 days of arrival</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Required for employment</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td>Research Canadian credit cards</td>
+                        <td>Low</td>
+                        <td>3 months after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>After establishing credit history</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Kids' Education Tab -->
+        <div id="education" class="tab-content">
+            <h2>🎓 Kids' Education</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Timeline</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="category-header">
+                        <td colspan="6">SCHOOL RESEARCH & ENROLLMENT</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Research Vancouver school districts</td>
+                        <td>High</td>
+                        <td>3-4 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>VSB, Burnaby, Richmond, West Van, North Van</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Research schools near housing area</td>
+                        <td>High</td>
+                        <td>2-3 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Elementary schools for Grade 3</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Contact potential schools</td>
+                        <td>High</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Ask about enrollment process</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Submit school applications</td>
+                        <td>High</td>
+                        <td>1-2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>May need proof of residence</td>
+                        <td></td>
+                    </tr>
+                    <tr class="category-header">
+                        <td colspan="6">ACADEMIC RECORDS</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Request transcripts from current school</td>
+                        <td>High</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Official transcripts for both children</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Get vaccination records for school</td>
+                        <td>High</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>BC immunization requirements</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Research curriculum differences</td>
+                        <td>Medium</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>BC vs California curriculum</td>
+                        <td></td>
+                    </tr>
+                    <tr class="category-header">
+                        <td colspan="6">ACTIVITIES & SUPPORT</td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Research after-school programs</td>
+                        <td>Medium</td>
+                        <td>1 month after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Sports, arts, tutoring</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Look into ESL support if needed</td>
+                        <td>Medium</td>
+                        <td>Before enrollment</td>
+                        <td class="status-na">N/A</td>
+                        <td>English as Second Language</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td>Research private/alternative schools</td>
+                        <td>Low</td>
+                        <td>3 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Backup options</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td>Connect with other expat families</td>
+                        <td>Low</td>
+                        <td>1 month after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Facebook groups, meetups</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Utilities & Services Tab -->
+        <div id="utilities" class="tab-content">
+            <h2>⚡ Utilities & Services</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Timeline</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="category-header">
+                        <td colspan="6">DISCONNECT US SERVICES</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Cancel/transfer electricity (PG&E)</td>
+                        <td>High</td>
+                        <td>2 weeks before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Schedule final reading</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Cancel/transfer gas service</td>
+                        <td>High</td>
+                        <td>2 weeks before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Schedule final reading</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Cancel water/sewer/garbage</td>
+                        <td>High</td>
+                        <td>2 weeks before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Contact Antioch utilities</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Cancel internet/cable (Comcast/AT&T)</td>
+                        <td>High</td>
+                        <td>1 week before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Return equipment</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Cancel US cell phone plan</td>
+                        <td>Medium</td>
+                        <td>After arrival</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Or switch to international plan</td>
+                        <td></td>
+                    </tr>
+                    <tr class="category-header">
+                        <td colspan="6">SETUP CANADIAN SERVICES</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Setup electricity (BC Hydro)</td>
+                        <td>High</td>
+                        <td>2 weeks before arrival</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>May need deposit</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Setup gas service (FortisBC)</td>
+                        <td>High</td>
+                        <td>2 weeks before arrival</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>If applicable to housing</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Setup internet service</td>
+                        <td>High</td>
+                        <td>1 week before arrival</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Shaw, Telus, Rogers options</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Get Canadian cell phone plan</td>
+                        <td>Medium</td>
+                        <td>Within 1 week of arrival</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Rogers, Bell, Telus, Freedom</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Setup cable/streaming services</td>
+                        <td>Medium</td>
+                        <td>1 month after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Canadian content different from US</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td>Setup home security system</td>
+                        <td>Low</td>
+                        <td>1 month after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Research Canadian providers</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Housing & Moving Tab -->
+        <div id="housing" class="tab-content">
+            <h2>🏠 Housing & Moving</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Timeline</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="category-header">
+                        <td colspan="6">HOUSING SEARCH</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Research Vancouver neighborhoods</td>
+                        <td>High</td>
+                        <td>4-6 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Consider schools, commute, budget</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Find real estate agent or rental agent</td>
+                        <td>High</td>
+                        <td>3-4 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Who understands international moves</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Secure housing (rent/buy)</td>
+                        <td>High</td>
+                        <td>2-3 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>May need to do remotely</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Get home inspection (if buying)</td>
+                        <td>High</td>
+                        <td>1-2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Canadian standards may differ</td>
+                        <td></td>
+                    </tr>
+                    <tr class="category-header">
+                        <td colspan="6">MOVING LOGISTICS</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Get quotes from international moving companies</td>
+                        <td>High</td>
+                        <td>2-3 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>At least 3 quotes</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Book moving company</td>
+                        <td>High</td>
+                        <td>1-2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Check insurance coverage</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Research customs regulations</td>
+                        <td>High</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>What can/cannot be brought</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Create inventory of belongings</td>
+                        <td>Medium</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>For customs and insurance</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Arrange temporary accommodation</td>
+                        <td>Medium</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>If housing not ready upon arrival</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td>Sell/donate items not worth moving</td>
+                        <td>Low</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Reduce moving costs</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Personal & Lifestyle Tab -->
+        <div id="personal" class="tab-content">
+            <h2>👥 Personal & Lifestyle</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Priority</th>
+                        <th>Timeline</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="category-header">
+                        <td colspan="6">TRANSPORTATION</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Research getting Canadian driver's license</td>
+                        <td>High</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>BC driver's license requirements</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Get International Driving Permit</td>
+                        <td>High</td>
+                        <td>2 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Temporary driving authorization</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Research car insurance in BC</td>
+                        <td>Medium</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>ICBC (government insurance)</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Decide on shipping vs. buying car</td>
+                        <td>Medium</td>
+                        <td>3 months before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Cost comparison and import regulations</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td>Research public transportation</td>
+                        <td>Low</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>TransLink system in Vancouver</td>
+                        <td></td>
+                    </tr>
+                    <tr class="category-header">
+                        <td colspan="6">SOCIAL & COMMUNITY</td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Research community centers and activities</td>
+                        <td>Medium</td>
+                        <td>1 month after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>For family activities</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Find places of worship/community groups</td>
+                        <td>Medium</td>
+                        <td>1 month after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>If applicable</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td>Join expat/newcomer groups</td>
+                        <td>Low</td>
+                        <td>1 month after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Facebook groups, meetup.com</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td>Research recreational activities</td>
+                        <td>Low</td>
+                        <td>2 months after</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Sports, hobbies, outdoor activities</td>
+                        <td></td>
+                    </tr>
+                    <tr class="category-header">
+                        <td colspan="6">PERSONAL DOCUMENTS</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td>Update address with US institutions</td>
+                        <td>High</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Banks, credit cards, IRS, etc.</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Set up mail forwarding</td>
+                        <td>Medium</td>
+                        <td>2 weeks before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>USPS mail forwarding service</td>
+                        <td></td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td>Update voter registration</td>
+                        <td>Medium</td>
+                        <td>1 month before</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>US absentee voting registration</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Timeline Overview Tab -->
+        <div id="timeline" class="tab-content">
+            <h2>📅 Timeline Overview</h2>
+            <div style="margin-bottom: 20px;">
+                <h3>📋 Key Milestones</h3>
+                <div style="background-color: #f8f9fa; padding: 15px; border-radius: 5px;">
+                    <p><strong>6 months before:</strong> Start visa/immigration process</p>
+                    <p><strong>4-5 months before:</strong> Begin housing search, research schools</p>
+                    <p><strong>3 months before:</strong> Secure housing, get moving quotes</p>
+                    <p><strong>2 months before:</strong> Book movers, start medical/education prep</p>
+                    <p><strong>1 month before:</strong> Finalize all arrangements, start canceling services</p>
+                    <p><strong>2 weeks before:</strong> Confirm all services, pack essentials</p>
+                    <p><strong>Moving week:</strong> Final preparations and travel</p>
+                    <p><strong>First month:</strong> Setup new services, enroll kids in school</p>
+                </div>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Phase</th>
+                        <th>Timeline</th>
+                        <th>Key Tasks</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="priority-high">
+                        <td><strong>Phase 1: Planning</strong></td>
+                        <td>6-4 months before</td>
+                        <td>Visas, housing research, job search</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Critical foundation phase</td>
+                    </tr>
+                    <tr class="priority-high">
+                        <td><strong>Phase 2: Securing</strong></td>
+                        <td>4-2 months before</td>
+                        <td>Housing, schools, moving company</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Lock in major decisions</td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td><strong>Phase 3: Preparing</strong></td>
+                        <td>2-1 months before</td>
+                        <td>Documents, medical records, utilities</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Gather everything needed</td>
+                    </tr>
+                    <tr class="priority-medium">
+                        <td><strong>Phase 4: Executing</strong></td>
+                        <td>1 month-moving day</td>
+                        <td>Cancel services, final preparations</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Execute the move</td>
+                    </tr>
+                    <tr class="priority-low">
+                        <td><strong>Phase 5: Settling</strong></td>
+                        <td>First 3 months</td>
+                        <td>Setup new life, integrate into community</td>
+                        <td class="status-not-started">Not Started</td>
+                        <td>Make Canada home</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="margin-top: 30px;">
+                <h3>⚠️ Critical Deadlines</h3>
+                <div style="background-color: #fff3cd; padding: 15px; border-radius: 5px; border-left: 4px solid #ffc107;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li><strong>School Enrollment:</strong> Must be completed before school year starts (September)</li>
+                        <li><strong>Visa Applications:</strong> Can take 3-6 months, start early</li>
+                        <li><strong>Housing:</strong> Vancouver market is competitive, secure early</li>
+                        <li><strong>Moving Companies:</strong> International moves need 6-8 weeks lead time</li>
+                        <li><strong>Medical Records:</strong> Can take weeks to obtain from multiple providers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <h3>💡 Pro Tips</h3>
+                <div style="background-color: #d1ecf1; padding: 15px; border-radius: 5px; border-left: 4px solid #0dcaf0;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li>Keep digital copies of all important documents in cloud storage</li>
+                        <li>Vancouver has a high cost of living - budget accordingly</li>
+                        <li>Canadian banking requires building credit history from scratch</li>
+                        <li>BC has different school calendar and curriculum than California</li>
+                        <li>Weather is very different - invest in proper rain gear and winter clothes</li>
+                        <li>Healthcare is publicly funded but may have wait times for specialists</li>
+                        <li>Consider joining Facebook groups for Americans/expats in Vancouver</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.classList.add('active');
+        }
+
+        // Initialize with first tab active
+        document.addEventListener('DOMContentLoaded', function() {
+            showTab('legal');
+        });
+    </script>
+</body>
+</html>
